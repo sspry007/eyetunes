@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  eyetunes
+
+  Created by Steven Spry on 6/2/20.
+  Copyright © 2020 Steven Spry. All rights reserved.
+*/
+
+"MasterTitle" = "Eye Tunes: Top 100 Albums";
+"DetailTitle" = "Eye Tunes";
+"OpeniTunesAction" = "Open in iTunes";
+"AlbumLargeFilename" = "1000x1000bb.jpg";
+
+

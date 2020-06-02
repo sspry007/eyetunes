@@ -9,11 +9,27 @@
 /* Begin PBXBuildFile section */
 		5EE7E1642486E720001094F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E1632486E720001094F3 /* AppDelegate.swift */; };
 		5EE7E1662486E720001094F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E1652486E720001094F3 /* SceneDelegate.swift */; };
-		5EE7E1682486E720001094F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E1672486E720001094F3 /* ViewController.swift */; };
-		5EE7E16B2486E720001094F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE7E1692486E720001094F3 /* Main.storyboard */; };
 		5EE7E16D2486E722001094F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE7E16C2486E722001094F3 /* Assets.xcassets */; };
 		5EE7E1702486E722001094F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE7E16E2486E722001094F3 /* LaunchScreen.storyboard */; };
 		5EE7E17B2486E722001094F3 /* eyetunesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E17A2486E722001094F3 /* eyetunesTests.swift */; };
+		5EE7E1A12486E835001094F3 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E1862486E834001094F3 /* Genre.swift */; };
+		5EE7E1A22486E835001094F3 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E1872486E834001094F3 /* Album.swift */; };
+		5EE7E1A32486E835001094F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EE7E1882486E834001094F3 /* Localizable.strings */; };
+		5EE7E1A42486E835001094F3 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E18B2486E834001094F3 /* AlbumCell.swift */; };
+		5EE7E1A52486E835001094F3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E18D2486E834001094F3 /* DetailViewController.swift */; };
+		5EE7E1A62486E835001094F3 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E18E2486E834001094F3 /* MasterViewController.swift */; };
+		5EE7E1A72486E835001094F3 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E1912486E834001094F3 /* Result.swift */; };
+		5EE7E1A82486E835001094F3 /* ErrorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E1922486E834001094F3 /* ErrorResult.swift */; };
+		5EE7E1A92486E835001094F3 /* AlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E1932486E834001094F3 /* AlbumService.swift */; };
+		5EE7E1AA2486E835001094F3 /* AlbumParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E1952486E834001094F3 /* AlbumParser.swift */; };
+		5EE7E1AB2486E835001094F3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5EE7E1962486E834001094F3 /* README.md */; };
+		5EE7E1AC2486E835001094F3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E1982486E835001094F3 /* Strings.swift */; };
+		5EE7E1AD2486E835001094F3 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E1992486E835001094F3 /* UIFont+Extension.swift */; };
+		5EE7E1AE2486E835001094F3 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E19B2486E835001094F3 /* AlbumViewModel.swift */; };
+		5EE7E1AF2486E835001094F3 /* AlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E19C2486E835001094F3 /* AlbumsViewModel.swift */; };
+		5EE7E1B02486E835001094F3 /* Master.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE7E19E2486E835001094F3 /* Master.png */; };
+		5EE7E1B12486E835001094F3 /* Detail.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE7E19F2486E835001094F3 /* Detail.png */; };
+		5EE7E1B22486E835001094F3 /* Feed.json in Resources */ = {isa = PBXBuildFile; fileRef = 5EE7E1A02486E835001094F3 /* Feed.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +43,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5EE7E1602486E720001094F3 /* eyetunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eyetunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EE7E1602486E720001094F3 /* Eye Tunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eye Tunes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE7E1632486E720001094F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EE7E1652486E720001094F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5EE7E1672486E720001094F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5EE7E16A2486E720001094F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EE7E16C2486E722001094F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EE7E16F2486E722001094F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EE7E1712486E722001094F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EE7E1762486E722001094F3 /* eyetunesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eyetunesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE7E17A2486E722001094F3 /* eyetunesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eyetunesTests.swift; sourceTree = "<group>"; };
 		5EE7E17C2486E722001094F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EE7E1862486E834001094F3 /* Genre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		5EE7E1872486E834001094F3 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		5EE7E1882486E834001094F3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		5EE7E18B2486E834001094F3 /* AlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		5EE7E18D2486E834001094F3 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5EE7E18E2486E834001094F3 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		5EE7E1912486E834001094F3 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		5EE7E1922486E834001094F3 /* ErrorResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResult.swift; sourceTree = "<group>"; };
+		5EE7E1932486E834001094F3 /* AlbumService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumService.swift; sourceTree = "<group>"; };
+		5EE7E1952486E834001094F3 /* AlbumParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumParser.swift; sourceTree = "<group>"; };
+		5EE7E1962486E834001094F3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5EE7E1982486E835001094F3 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		5EE7E1992486E835001094F3 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		5EE7E19B2486E835001094F3 /* AlbumViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
+		5EE7E19C2486E835001094F3 /* AlbumsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsViewModel.swift; sourceTree = "<group>"; };
+		5EE7E19E2486E835001094F3 /* Master.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Master.png; sourceTree = "<group>"; };
+		5EE7E19F2486E835001094F3 /* Detail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Detail.png; sourceTree = "<group>"; };
+		5EE7E1A02486E835001094F3 /* Feed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Feed.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +102,7 @@
 		5EE7E1612486E720001094F3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5EE7E1602486E720001094F3 /* eyetunes.app */,
+				5EE7E1602486E720001094F3 /* Eye Tunes.app */,
 				5EE7E1762486E722001094F3 /* eyetunesTests.xctest */,
 			);
 			name = Products;
@@ -81,8 +113,14 @@
 			children = (
 				5EE7E1632486E720001094F3 /* AppDelegate.swift */,
 				5EE7E1652486E720001094F3 /* SceneDelegate.swift */,
-				5EE7E1672486E720001094F3 /* ViewController.swift */,
-				5EE7E1692486E720001094F3 /* Main.storyboard */,
+				5EE7E1962486E834001094F3 /* README.md */,
+				5EE7E1882486E834001094F3 /* Localizable.strings */,
+				5EE7E1852486E834001094F3 /* Model */,
+				5EE7E19D2486E835001094F3 /* Resources */,
+				5EE7E18F2486E834001094F3 /* Service */,
+				5EE7E1892486E834001094F3 /* UI */,
+				5EE7E1972486E835001094F3 /* Utilities */,
+				5EE7E19A2486E835001094F3 /* View Model */,
 				5EE7E16C2486E722001094F3 /* Assets.xcassets */,
 				5EE7E16E2486E722001094F3 /* LaunchScreen.storyboard */,
 				5EE7E1712486E722001094F3 /* Info.plist */,
@@ -97,6 +135,96 @@
 				5EE7E17C2486E722001094F3 /* Info.plist */,
 			);
 			path = eyetunesTests;
+			sourceTree = "<group>";
+		};
+		5EE7E1852486E834001094F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5EE7E1862486E834001094F3 /* Genre.swift */,
+				5EE7E1872486E834001094F3 /* Album.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5EE7E1892486E834001094F3 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5EE7E18A2486E834001094F3 /* Cell */,
+				5EE7E18C2486E834001094F3 /* View */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5EE7E18A2486E834001094F3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5EE7E18B2486E834001094F3 /* AlbumCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5EE7E18C2486E834001094F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5EE7E18D2486E834001094F3 /* DetailViewController.swift */,
+				5EE7E18E2486E834001094F3 /* MasterViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5EE7E18F2486E834001094F3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5EE7E1902486E834001094F3 /* Result */,
+				5EE7E1932486E834001094F3 /* AlbumService.swift */,
+				5EE7E1942486E834001094F3 /* Parser */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		5EE7E1902486E834001094F3 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				5EE7E1912486E834001094F3 /* Result.swift */,
+				5EE7E1922486E834001094F3 /* ErrorResult.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		5EE7E1942486E834001094F3 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				5EE7E1952486E834001094F3 /* AlbumParser.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		5EE7E1972486E835001094F3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5EE7E1982486E835001094F3 /* Strings.swift */,
+				5EE7E1992486E835001094F3 /* UIFont+Extension.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5EE7E19A2486E835001094F3 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				5EE7E19B2486E835001094F3 /* AlbumViewModel.swift */,
+				5EE7E19C2486E835001094F3 /* AlbumsViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		5EE7E19D2486E835001094F3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5EE7E19E2486E835001094F3 /* Master.png */,
+				5EE7E19F2486E835001094F3 /* Detail.png */,
+				5EE7E1A02486E835001094F3 /* Feed.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,7 +244,7 @@
 			);
 			name = eyetunes;
 			productName = eyetunes;
-			productReference = 5EE7E1602486E720001094F3 /* eyetunes.app */;
+			productReference = 5EE7E1602486E720001094F3 /* Eye Tunes.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5EE7E1752486E722001094F3 /* eyetunesTests */ = {
@@ -181,8 +309,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EE7E1702486E722001094F3 /* LaunchScreen.storyboard in Resources */,
+				5EE7E1A32486E835001094F3 /* Localizable.strings in Resources */,
+				5EE7E1B12486E835001094F3 /* Detail.png in Resources */,
+				5EE7E1AB2486E835001094F3 /* README.md in Resources */,
 				5EE7E16D2486E722001094F3 /* Assets.xcassets in Resources */,
-				5EE7E16B2486E720001094F3 /* Main.storyboard in Resources */,
+				5EE7E1B22486E835001094F3 /* Feed.json in Resources */,
+				5EE7E1B02486E835001094F3 /* Master.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,9 +332,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EE7E1682486E720001094F3 /* ViewController.swift in Sources */,
+				5EE7E1AF2486E835001094F3 /* AlbumsViewModel.swift in Sources */,
+				5EE7E1AD2486E835001094F3 /* UIFont+Extension.swift in Sources */,
+				5EE7E1A72486E835001094F3 /* Result.swift in Sources */,
+				5EE7E1A82486E835001094F3 /* ErrorResult.swift in Sources */,
+				5EE7E1AE2486E835001094F3 /* AlbumViewModel.swift in Sources */,
+				5EE7E1A62486E835001094F3 /* MasterViewController.swift in Sources */,
+				5EE7E1A92486E835001094F3 /* AlbumService.swift in Sources */,
 				5EE7E1642486E720001094F3 /* AppDelegate.swift in Sources */,
 				5EE7E1662486E720001094F3 /* SceneDelegate.swift in Sources */,
+				5EE7E1AC2486E835001094F3 /* Strings.swift in Sources */,
+				5EE7E1A12486E835001094F3 /* Genre.swift in Sources */,
+				5EE7E1A22486E835001094F3 /* Album.swift in Sources */,
+				5EE7E1A42486E835001094F3 /* AlbumCell.swift in Sources */,
+				5EE7E1AA2486E835001094F3 /* AlbumParser.swift in Sources */,
+				5EE7E1A52486E835001094F3 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,14 +369,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5EE7E1692486E720001094F3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5EE7E16A2486E720001094F3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5EE7E16E2486E722001094F3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -369,10 +505,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.spry.eyetunes;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = O;
+				PRODUCT_NAME = "Eye Tunes";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -387,10 +523,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.spry.eyetunes;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = O;
+				PRODUCT_NAME = "Eye Tunes";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -412,7 +548,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eyetunes.app/eyetunes";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Eye Tunes.app/Eye Tunes";
 			};
 			name = Debug;
 		};
@@ -434,7 +570,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eyetunes.app/eyetunes";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Eye Tunes.app/Eye Tunes";
 			};
 			name = Release;
 		};

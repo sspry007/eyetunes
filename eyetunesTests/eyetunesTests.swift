@@ -2,12 +2,12 @@
 //  eyetunesTests.swift
 //  eyetunesTests
 //
-//  Created by Steven Spry on 6/2/20.
+//  Created by Steven Spry on 5/28/20.
 //  Copyright © 2020 Steven Spry. All rights reserved.
 //
 
 import XCTest
-@testable import eyetunes
+@testable import Eye_Tunes
 
 class eyetunesTests: XCTestCase {
 
