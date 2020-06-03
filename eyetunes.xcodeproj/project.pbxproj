@@ -30,6 +30,10 @@
 		5EE7E1B02486E835001094F3 /* Master.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE7E19E2486E835001094F3 /* Master.png */; };
 		5EE7E1B12486E835001094F3 /* Detail.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE7E19F2486E835001094F3 /* Detail.png */; };
 		5EE7E1B22486E835001094F3 /* Feed.json in Resources */ = {isa = PBXBuildFile; fileRef = 5EE7E1A02486E835001094F3 /* Feed.json */; };
+		5EE7E1B72487C89A001094F3 /* AlbumServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E1B32487C89A001094F3 /* AlbumServiceTests.swift */; };
+		5EE7E1B82487C89A001094F3 /* AlbumsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E1B42487C89A001094F3 /* AlbumsViewModelTests.swift */; };
+		5EE7E1B92487C89A001094F3 /* albumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E1B52487C89A001094F3 /* albumTests.swift */; };
+		5EE7E1BA2487C89A001094F3 /* albumParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E1B62487C89A001094F3 /* albumParserTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,10 @@
 		5EE7E19E2486E835001094F3 /* Master.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Master.png; sourceTree = "<group>"; };
 		5EE7E19F2486E835001094F3 /* Detail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Detail.png; sourceTree = "<group>"; };
 		5EE7E1A02486E835001094F3 /* Feed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Feed.json; sourceTree = "<group>"; };
+		5EE7E1B32487C89A001094F3 /* AlbumServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumServiceTests.swift; sourceTree = "<group>"; };
+		5EE7E1B42487C89A001094F3 /* AlbumsViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsViewModelTests.swift; sourceTree = "<group>"; };
+		5EE7E1B52487C89A001094F3 /* albumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = albumTests.swift; sourceTree = "<group>"; };
+		5EE7E1B62487C89A001094F3 /* albumParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = albumParserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +140,10 @@
 			isa = PBXGroup;
 			children = (
 				5EE7E17A2486E722001094F3 /* eyetunesTests.swift */,
+				5EE7E1B62487C89A001094F3 /* albumParserTests.swift */,
+				5EE7E1B32487C89A001094F3 /* AlbumServiceTests.swift */,
+				5EE7E1B42487C89A001094F3 /* AlbumsViewModelTests.swift */,
+				5EE7E1B52487C89A001094F3 /* albumTests.swift */,
 				5EE7E17C2486E722001094F3 /* Info.plist */,
 			);
 			path = eyetunesTests;
@@ -354,7 +366,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EE7E1BA2487C89A001094F3 /* albumParserTests.swift in Sources */,
 				5EE7E17B2486E722001094F3 /* eyetunesTests.swift in Sources */,
+				5EE7E1B82487C89A001094F3 /* AlbumsViewModelTests.swift in Sources */,
+				5EE7E1B72487C89A001094F3 /* AlbumServiceTests.swift in Sources */,
+				5EE7E1B92487C89A001094F3 /* albumTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
