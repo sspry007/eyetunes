@@ -19,8 +19,9 @@ class AlbumCell: UITableViewCell {
             
             albumLabel.text = album.album
             artistLabel.text = album.artist
-            AlbumService().loadAlbumArt(url: album.thumbnailUrl, size: .thumb) { (image) in
-                DispatchQueue.main.async { [weak self] in
+            
+            AlbumService().loadAlbumArt(url: album.thumbnailUrl, size: .thumb) { [weak self] image in
+                DispatchQueue.main.async {
                     if let image = image {
                             self?.thumbnailImage.image = image
                     } else {
@@ -31,6 +32,7 @@ class AlbumCell: UITableViewCell {
         }
     }
     
+    // MARK: - UI Elements
     let thumbnailImage:UIImageView = {
         let thumbnailImage = UIImageView()
         thumbnailImage.contentMode = .scaleAspectFill

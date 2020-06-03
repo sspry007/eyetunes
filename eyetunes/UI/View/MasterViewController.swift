@@ -61,31 +61,30 @@ class MasterViewController: UIViewController {
 
         setupConstraints()
         
-        self.viewModel.fetchAlbums { result in
-            switch result {
-            case .success(_) :
-                DispatchQueue.main.async {
-                    self.closeFetch()
-                    self.tableView.reloadData()
-                }
-                break
-            case .failure(let error) :
-                DispatchQueue.main.async {
-                    self.closeFetch()
+        self.viewModel.fetchAlbums { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(_) :
+                    self?.closeFetch()
+                    self?.tableView.reloadData()
+                    break
+                case .failure(let error) :
+                    self?.closeFetch()
 
                     switch error {
                     case .network(let string):
-                        self.navigationItem.prompt = "Network: \(string)"
+                        self?.navigationItem.prompt = "Network: \(string)"
                     case .service(let string):
-                        self.navigationItem.prompt = "Service: \(string)"
+                        self?.navigationItem.prompt = "Service: \(string)"
                     case .parser(let string):
-                        self.navigationItem.prompt = "Parsing: \(string)"
+                        self?.navigationItem.prompt = "Parsing: \(string)"
                     case .custom(let string):
-                        self.navigationItem.prompt = "Custom: \(string)"
+                        self?.navigationItem.prompt = "Custom: \(string)"
                     }
                 }
             }
         }
+        
     }
     
     // MARK: - Private Instance methods

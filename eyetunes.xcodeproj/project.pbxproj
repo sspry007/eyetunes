@@ -122,14 +122,14 @@
 			children = (
 				5EE7E1632486E720001094F3 /* AppDelegate.swift */,
 				5EE7E1652486E720001094F3 /* SceneDelegate.swift */,
-				5EE7E1882486E834001094F3 /* Localizable.strings */,
 				5EE7E1852486E834001094F3 /* Model */,
-				5EE7E19D2486E835001094F3 /* Resources */,
-				5EE7E18F2486E834001094F3 /* Service */,
-				5EE7E1892486E834001094F3 /* UI */,
-				5EE7E1972486E835001094F3 /* Utilities */,
 				5EE7E19A2486E835001094F3 /* View Model */,
+				5EE7E1892486E834001094F3 /* UI */,
+				5EE7E18F2486E834001094F3 /* Service */,
+				5EE7E19D2486E835001094F3 /* Resources */,
+				5EE7E1972486E835001094F3 /* Utilities */,
 				5EE7E16C2486E722001094F3 /* Assets.xcassets */,
+				5EE7E1882486E834001094F3 /* Localizable.strings */,
 				5EE7E16E2486E722001094F3 /* LaunchScreen.storyboard */,
 				5EE7E1712486E722001094F3 /* Info.plist */,
 			);
@@ -152,8 +152,8 @@
 		5EE7E1852486E834001094F3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5EE7E1862486E834001094F3 /* Genre.swift */,
 				5EE7E1872486E834001094F3 /* Album.swift */,
+				5EE7E1862486E834001094F3 /* Genre.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,8 +161,8 @@
 		5EE7E1892486E834001094F3 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				5EE7E18A2486E834001094F3 /* Cell */,
 				5EE7E18C2486E834001094F3 /* View */,
+				5EE7E18A2486E834001094F3 /* Cell */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -178,8 +178,8 @@
 		5EE7E18C2486E834001094F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5EE7E18D2486E834001094F3 /* DetailViewController.swift */,
 				5EE7E18E2486E834001094F3 /* MasterViewController.swift */,
+				5EE7E18D2486E834001094F3 /* DetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,9 +187,9 @@
 		5EE7E18F2486E834001094F3 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				5EE7E1902486E834001094F3 /* Result */,
 				5EE7E1932486E834001094F3 /* AlbumService.swift */,
 				5EE7E1942486E834001094F3 /* Parser */,
+				5EE7E1902486E834001094F3 /* Result */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -214,8 +214,8 @@
 		5EE7E1972486E835001094F3 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				5EE7E1982486E835001094F3 /* Strings.swift */,
 				5EE7E1992486E835001094F3 /* UIFont+Extension.swift */,
+				5EE7E1982486E835001094F3 /* Strings.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -223,8 +223,8 @@
 		5EE7E19A2486E835001094F3 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				5EE7E19B2486E835001094F3 /* AlbumViewModel.swift */,
 				5EE7E19C2486E835001094F3 /* AlbumsViewModel.swift */,
+				5EE7E19B2486E835001094F3 /* AlbumViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -232,9 +232,9 @@
 		5EE7E19D2486E835001094F3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5EE7E1A02486E835001094F3 /* Feed.json */,
 				5EE7E19E2486E835001094F3 /* Master.png */,
 				5EE7E19F2486E835001094F3 /* Detail.png */,
-				5EE7E1A02486E835001094F3 /* Feed.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";

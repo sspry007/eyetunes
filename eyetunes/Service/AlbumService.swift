@@ -33,7 +33,6 @@ final class AlbumService : AlbumServiceProtocol {
     }
     
     func cancelFetchAlbums() {
-        
         if let task = task {
             task.cancel()
         }
@@ -54,7 +53,6 @@ final class AlbumService : AlbumServiceProtocol {
             var request = URLRequest(url: url,cachePolicy: .reloadIgnoringCacheData, timeoutInterval: 30)
             request.httpMethod = "GET"
             
-
             task = URLSession(configuration: .default).dataTask(with: request) { (data, response, error) in
                 if let error = error {
                     completion(.failure(.network(string: "An error occured during request :" + error.localizedDescription)))

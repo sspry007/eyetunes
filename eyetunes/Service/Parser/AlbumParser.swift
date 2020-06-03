@@ -27,5 +27,4 @@ final class AlbumParser {
             completion(Result.failure(ErrorResult.parser(string: error.localizedDescription)))
         }
     }
-     
 }

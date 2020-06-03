@@ -29,9 +29,9 @@ class DetailViewController: UIViewController {
             releaseLabel.text = "Released: \(album.formattedReleaseDate)"
             copyrightLabel.text = album.copyright
 
-            AlbumService().loadAlbumArt(url: album.thumbnailUrl, size: .full) { (image) in
+            AlbumService().loadAlbumArt(url: album.thumbnailUrl, size: .full) { [weak self] image in
                 if let image = image {
-                    DispatchQueue.main.async { [weak self] in
+                    DispatchQueue.main.async {
                         self?.albumImage.image = image
                     }
                 }
@@ -39,6 +39,7 @@ class DetailViewController: UIViewController {
         }
     }
     
+    // MARK: - UI Elements
     let scrollView:UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
