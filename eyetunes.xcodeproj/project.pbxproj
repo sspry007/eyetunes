@@ -93,6 +93,7 @@
 		5EE7E1572486E720001094F3 = {
 			isa = PBXGroup;
 			children = (
+				5EE7E1962486E834001094F3 /* README.md */,
 				5EE7E1622486E720001094F3 /* eyetunes */,
 				5EE7E1792486E722001094F3 /* eyetunesTests */,
 				5EE7E1612486E720001094F3 /* Products */,
@@ -113,7 +114,6 @@
 			children = (
 				5EE7E1632486E720001094F3 /* AppDelegate.swift */,
 				5EE7E1652486E720001094F3 /* SceneDelegate.swift */,
-				5EE7E1962486E834001094F3 /* README.md */,
 				5EE7E1882486E834001094F3 /* Localizable.strings */,
 				5EE7E1852486E834001094F3 /* Model */,
 				5EE7E19D2486E835001094F3 /* Resources */,
