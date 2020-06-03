@@ -12,11 +12,11 @@ This demo project uses the iTunes top 100 album feed, and displays them in a sim
 **Note:** Apple has made it mandatory to use launch screen storyboards by April 2020. If not done so, the app store submissions would get rejected.
 
 ## Screen Shots
-<img src="Resources/Master.png"
-     alt="Resources/Master.png"
+<img src="eyetunes/Resources/Master.png"
+     alt="Master.png"
      style="float: left;width: 50%; padding:40px" />
- <img src="Resources/Detail.png"
-      alt="Resources/detail.png"
+ <img src="eyetunes/Resources/Detail.png"
+      alt="detail.png"
       style="float: right;width: 50%;padding:40px;" />
 
 ## Wish List
