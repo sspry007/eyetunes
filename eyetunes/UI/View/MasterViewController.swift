@@ -122,12 +122,12 @@ extension MasterViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumCell", for: indexPath) as! AlbumCell
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumCell", for: indexPath) as? AlbumCell else { return UITableViewCell()}
         
         let album = self.viewModel.albums[indexPath.row]
         cell.album = album
         cell.accessoryType = .disclosureIndicator
-
         return cell
     }
     
