@@ -84,7 +84,10 @@ final class AlbumService : AlbumServiceProtocol {
             let imageURL = (size == .full) ? largeURL(baseURL) : baseURL
             let request = URLRequest(url: imageURL, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 30)
             URLSession.shared.dataTask(with: request) { data, response, error in
-                guard let data = data, error == nil else { return }
+                guard let data = data, error == nil else {
+                    completion(UIImage())
+                    return
+                }
                 completion(UIImage(data: data))
             }.resume()
         } else {
