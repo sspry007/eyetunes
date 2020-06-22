@@ -28,7 +28,20 @@ class DetailViewController: UIViewController {
             genreLabel.text = "Genre: \(album.genre)"
             releaseLabel.text = "Released: \(album.formattedReleaseDate)"
             copyrightLabel.text = album.copyright
-
+            
+            if let largeURL = largeURL(album.thumbnailUrl) {
+                ImageService.shared.fetchImage(url: largeURL) { [weak self] (image) in
+                    if let image = image {
+                        self?.albumImage.image = image
+                    } else {
+                        self?.albumImage.image = nil
+                    }
+                }
+            }
+            
+            
+            
+            /*
             AlbumService().loadAlbumArt(url: album.thumbnailUrl, size: .full) { [weak self] image in
                 if let image = image {
                     DispatchQueue.main.async {
@@ -36,6 +49,7 @@ class DetailViewController: UIViewController {
                     }
                 }
             }
+ */
         }
     }
     
@@ -156,6 +170,14 @@ class DetailViewController: UIViewController {
         setupConstraints()
     }
     
+    private func largeURL(_ string:String) -> String? {
+        
+        if let baseURL = URL(string: string)?.deletingLastPathComponent() {
+            let largeURL = baseURL.appendingPathComponent(Strings.fromKey("AlbumLargeFilename"))
+            return largeURL.absoluteString
+        }
+        return nil
+    }
 }
 
 // MARK: - Setup Views and Constraints

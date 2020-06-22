@@ -11,7 +11,7 @@ import UIKit
 class MasterViewController: UIViewController {
         
     lazy var viewModel : AlbumsViewModel = {
-        let viewModel = AlbumsViewModel(isMocked: false)
+        let viewModel = AlbumsViewModel(isMocked: true)
         return viewModel
     }()
     

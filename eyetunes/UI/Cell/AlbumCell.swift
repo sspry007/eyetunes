@@ -19,14 +19,14 @@ class AlbumCell: UITableViewCell {
             
             albumLabel.text = album.album
             artistLabel.text = album.artist
+            thumbnailImage.image = nil
             
-            AlbumService().loadAlbumArt(url: album.thumbnailUrl, size: .thumb) { [weak self] image in
-                DispatchQueue.main.async {
-                    if let image = image {
-                            self?.thumbnailImage.image = image
-                    } else {
-                        self?.thumbnailImage.image = nil
-                    }
+            ImageService.shared.fetchImage(url: album.thumbnailUrl) { [weak self] (image) in
+                if let image = image {
+                    self?.thumbnailImage.image = image
+                } else {
+                    self?.thumbnailImage.image = nil
+
                 }
             }
         }

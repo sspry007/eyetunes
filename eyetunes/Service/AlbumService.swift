@@ -71,28 +71,11 @@ final class AlbumService : AlbumServiceProtocol {
     
     fileprivate func fetchMockedAlbums(_ completion: @escaping AlbumServiceCompletionHandler) {
         
-        guard let data = FileManager.readJson(forResource: "Feed") else {
+        guard let data = FileManager.readJson(forResource: "FeedDupImages") else {
             completion(Result.failure(ErrorResult.custom(string: "No file or data")))
             return
         }
         completion(.success(data))
-    }
-
-    func loadAlbumArt(url: String, size:AlbumArtSize, completion: @escaping (UIImage?) -> ()) {
-        
-        if let baseURL = URL(string: url) {
-            let imageURL = (size == .full) ? largeURL(baseURL) : baseURL
-            let request = URLRequest(url: imageURL, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 30)
-            URLSession.shared.dataTask(with: request) { data, response, error in
-                guard let data = data, error == nil else {
-                    completion(UIImage())
-                    return
-                }
-                completion(UIImage(data: data))
-            }.resume()
-        } else {
-            completion(UIImage())
-        }        
     }
     
     private func largeURL(_ url:URL) -> URL {
