@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E2A59FA24AB8D0A00EAF659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2A59F824AB8D0A00EAF659 /* Main.storyboard */; };
 		5EE4402F249CEB3A00708CDE /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE4402E249CEB3A00708CDE /* ImageService.swift */; };
 		5EE44031249D06B000708CDE /* FeedDupImages.json in Resources */ = {isa = PBXBuildFile; fileRef = 5EE44030249D06B000708CDE /* FeedDupImages.json */; };
 		5EE7E1642486E720001094F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7E1632486E720001094F3 /* AppDelegate.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E2A59F924AB8D0A00EAF659 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EE4402E249CEB3A00708CDE /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		5EE44030249D06B000708CDE /* FeedDupImages.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FeedDupImages.json; sourceTree = "<group>"; };
 		5EE7E1602486E720001094F3 /* Eye Tunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eye Tunes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +137,7 @@
 				5EE7E16C2486E722001094F3 /* Assets.xcassets */,
 				5EE7E1882486E834001094F3 /* Localizable.strings */,
 				5EE7E16E2486E722001094F3 /* LaunchScreen.storyboard */,
+				5E2A59F824AB8D0A00EAF659 /* Main.storyboard */,
 				5EE7E1712486E722001094F3 /* Info.plist */,
 			);
 			path = eyetunes;
@@ -332,6 +335,7 @@
 				5EE7E1AB2486E835001094F3 /* README.md in Resources */,
 				5EE7E16D2486E722001094F3 /* Assets.xcassets in Resources */,
 				5EE44031249D06B000708CDE /* FeedDupImages.json in Resources */,
+				5E2A59FA24AB8D0A00EAF659 /* Main.storyboard in Resources */,
 				5EE7E1B22486E835001094F3 /* Feed.json in Resources */,
 				5EE7E1B02486E835001094F3 /* Master.png in Resources */,
 			);
@@ -393,6 +397,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5E2A59F824AB8D0A00EAF659 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E2A59F924AB8D0A00EAF659 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		5EE7E16E2486E722001094F3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
