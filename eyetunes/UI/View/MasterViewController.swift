@@ -16,30 +16,13 @@ class MasterViewController: UIViewController {
     }()
     
     // MARK: - UI Elements
-    let tableView:UITableView = {
-        let tableView = UITableView(frame: CGRect.zero, style: .grouped)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.backgroundColor = .clear
-        tableView.estimatedRowHeight = 66
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.register(AlbumCell.self, forCellReuseIdentifier: "AlbumCell")
-        
-        var frame = CGRect.zero
-        frame.size.height = .leastNormalMagnitude
-        tableView.tableHeaderView = UIView(frame: frame)
-        
-        return tableView
-    }()
-    
-    let activityIndicator:UIActivityIndicatorView = {
-        let activityIndicator = UIActivityIndicatorView(style: .medium)
-        activityIndicator.startAnimating()
-        return activityIndicator
-    }()
-    
-    let cancelButton: UIBarButtonItem = {
-        let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: nil)
-        return cancelButton
+    @IBOutlet weak var tableView:UITableView!
+    let refreshControl = UIRefreshControl()
+    let navIcon: UIBarButtonItem = {
+        let logo = UIImage(named: "NavIcon")
+        let imageView = UIImageView(image:logo)
+        let buttonItem = UIBarButtonItem(customView: imageView)
+        return buttonItem
     }()
         
     // MARK: - View Lifecycle
@@ -47,71 +30,85 @@ class MasterViewController: UIViewController {
         super.viewDidLoad()
         
         title = Strings.fromKey("MasterTitle")
-        view.backgroundColor = .white
+        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationItem.rightBarButtonItem = navIcon
         
-        let activityButton = UIBarButtonItem(customView: activityIndicator)
-        navigationItem.leftBarButtonItem = activityButton
-        cancelButton.target = self
-        cancelButton.action = #selector(tapCancel(_:))
-        navigationItem.rightBarButtonItem = cancelButton
-
-        view.addSubview(tableView)
-        tableView.dataSource = self
-        tableView.delegate = self
-
-        setupConstraints()
-        
-        self.viewModel.fetchAlbums { [weak self] result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(_) :
-                    self?.closeFetch()
-                    self?.tableView.reloadData()
-                    break
-                case .failure(let error) :
-                    self?.closeFetch()
-
-                    switch error {
-                    case .network(let string):
-                        self?.navigationItem.prompt = "Network: \(string)"
-                    case .service(let string):
-                        self?.navigationItem.prompt = "Service: \(string)"
-                    case .parser(let string):
-                        self?.navigationItem.prompt = "Parsing: \(string)"
-                    case .custom(let string):
-                        self?.navigationItem.prompt = "Custom: \(string)"
-                    }
-                }
-            }
-        }
-        
+        setupViews()
+        fetchAlbums()
     }
     
     // MARK: - Private Instance methods
-    @objc fileprivate func tapCancel(_ sender: UIBarButtonItem) {
-        viewModel.service?.cancelFetchAlbums()
-        closeFetch()
+    @objc private func refreshData() {
+        self.refreshControl.beginRefreshing()
+        fetchAlbums()
     }
     
-    fileprivate func closeFetch() {
-        activityIndicator.stopAnimating()
-        navigationItem.leftBarButtonItem = nil
-        navigationItem.rightBarButtonItem = nil
+    func fetchAlbums() {
+        refreshControl.beginRefreshing()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            
+            self.viewModel.fetchAlbums { [weak self] result in
+                
+                DispatchQueue.main.async {
+                    
+                    self?.refreshControl.endRefreshing()
+
+                    switch result {
+                    case .success(_) :
+                        self?.tableView.reloadData()
+                        break
+                    case .failure(let error) :
+                        switch error {
+                        case .network(let string):
+                            self?.navigationItem.prompt = "Network: \(string)"
+                        case .service(let string):
+                            self?.navigationItem.prompt = "Service: \(string)"
+                        case .parser(let string):
+                            self?.navigationItem.prompt = "Parsing: \(string)"
+                        case .custom(let string):
+                            self?.navigationItem.prompt = "Custom: \(string)"
+                        }
+                    }
+                }
+                
+            }
+        }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)  {
+        if segue.identifier == "PickAlbumSegue", let detailViewController = segue.destination as? DetailViewController {
+            if let selectedIndex = self.tableView.indexPathForSelectedRow {
+                let album = self.viewModel.albums[selectedIndex.row]
+                detailViewController.album = album
+            }
+        }
+    }
     
 }
 
-// MARK: - Setup Constraints
+// MARK: - Setup Views
 extension MasterViewController {
     
-    fileprivate func setupConstraints() {
-        tableView.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor).isActive = true
-        tableView.leadingAnchor.constraint(equalTo:view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo:view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo:view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+    fileprivate func setupViews() {
+        view.backgroundColor = .white
+
+        refreshControl.addTarget(self, action: #selector(self.refreshData), for: .valueChanged)
+        if #available(iOS 10.0, *) {
+            self.tableView.refreshControl = self.refreshControl
+        } else {
+            self.tableView.addSubview(self.refreshControl)
+        }
+
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .clear
+        tableView.estimatedRowHeight = 66
+        tableView.rowHeight = UITableView.automaticDimension
+        //tableView.register(AlbumCell.self, forCellReuseIdentifier: "AlbumCell")
+        
+        var frame = CGRect.zero
+        frame.size.height = .leastNormalMagnitude
+        tableView.tableHeaderView = UIView(frame: frame)
     }
-    
 }
 
 // MARK: - TableView Delegates
@@ -133,11 +130,6 @@ extension MasterViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        let album = self.viewModel.albums[indexPath.row]
-        let detailVC = DetailViewController()
-        detailVC.album = album
-        navigationController?.pushViewController(detailVC, animated: true)
     }
 }
 

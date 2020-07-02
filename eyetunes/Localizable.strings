@@ -6,8 +6,8 @@
   Copyright © 2020 Steven Spry. All rights reserved.
 */
 
-"MasterTitle" = "Eye Tunes: Top 100 Albums";
-"DetailTitle" = "Eye Tunes";
+"MasterTitle" = "Top 100 Albums";
+"DetailTitle" = "Details";
 "OpeniTunesAction" = "Open in iTunes";
 "AlbumLargeFilename" = "1000x1000bb.jpg";
 
