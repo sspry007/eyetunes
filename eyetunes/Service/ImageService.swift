@@ -28,7 +28,7 @@ final class ImageService {
         instance.setup()
         return instance
     }()
-    var delay:Int = 1
+    var delay:Int = 0
     
     private var images:[String:ImageState] = [:]
     private var downloadQueue = OperationQueue()
