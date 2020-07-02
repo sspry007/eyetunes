@@ -3,7 +3,6 @@
 This demo project uses the iTunes top 100 album feed, and displays them in a simple table view.  Selecting one displays a card style album detail, with a link to open the album on iTunes.
 
 ## Highlights
-* No storyboards or xibs, except LaunchScreen, ***per project requirements***
 * Detail view uses a UIScroll view for bounce
 * Fetches higher larger full sized album art in details.
 * Code-based Autolayout
