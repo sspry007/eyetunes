@@ -43,7 +43,6 @@ class AlbumCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setupViews()
     }
     
     override func awakeFromNib() {
